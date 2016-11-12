@@ -1,14 +1,14 @@
-<ul class="primary-nav">
- 	{{# navItems }}
+<ul class="breadcrumbs">
+ 	{{# crumbs }}
  	<li>
  		<a href="{{{ url }}}">{{ text }}</a>
  	</li>
- 	{{/ navItems }}
- 	{{^ navItems }}
+ 	{{/ crumbs }}
+ 	{{^ crumbs }}
 		{{# listItems.four }}
 		<li>
 			<a href="{{{ url }}}">{{ name.first }}</a>
 		</li>
 		{{/ listItems.four }}
- 	{{/ navItems }}
+ 	{{/ crumbs }}
 </ul>

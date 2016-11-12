@@ -1,4 +1,23 @@
 /******************************************************
+ * Nerdschool: Custom variables for our own build tasks
+******************************************************/
+var sass = require('gulp-sass'); // To compile our sass partials
+var sassGlob = require('gulp-sass-glob'); // Allows us to compile folders of sass partial, so we don't have to specify each partial explicitly (uses globbing pattern)
+var plumber = require('gulp-plumber');  // Errors messages that don't break streams
+var notify = require("gulp-notify");    // Get better error notifications
+
+/******************************************************
+ * Nerdschool: Custom functions
+******************************************************/
+
+// Function for improved error notifications
+function errorAlert(error) {
+  notify.onError({title: "Build Error", message: "Check your terminal", sound: "Sosumi"})(error); //Error Notification
+  console.log(error.toString()); //Prints Error to Console
+  this.emit("end"); //End function
+}
+
+/******************************************************
  * PATTERN LAB NODE
  * EDITION-NODE-GULP
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
@@ -11,6 +30,19 @@ var gulp = require('gulp'),
 function resolvePath(pathInput) {
   return path.resolve(pathInput).replace(/\\/g,"/");
 }
+
+/******************************************************
+ * Nerdschool: Custom gulp tasks
+******************************************************/
+
+gulp.task('compile-sass', function () {
+  return gulp.src(['scss/*.scss'], {cwd: path.resolve(paths().source.css)})
+  .pipe(plumber({errorHandler: errorAlert}))
+  .pipe(sassGlob()) // Forårsaker muligens treigere kompilering. Dump dersom det blir for plagsomt. Sjekk ut watchify?
+  .pipe(sass())
+  .pipe(gulp.dest(path.resolve(paths().source.css)))
+  .pipe(browserSync.stream());
+});
 
 /******************************************************
  * COPY TASKS - stream assets from source to destination
@@ -122,7 +154,13 @@ gulp.task('patternlab:loadstarterkit', function (done) {
   done();
 });
 
-gulp.task('patternlab:build', gulp.series('pl-assets', build, function(done){
+// NERDSCHOOL: We define our own build task in order to also compile sass on build
+
+// gulp.task('patternlab:build', gulp.series('pl-assets', build, function(done){
+//   done();
+// }));
+
+gulp.task('patternlab:build', gulp.series('compile-sass', 'pl-assets', build, function(done){
   done();
 }));
 
@@ -156,6 +194,9 @@ function reloadCSS() {
 function watch() {
   gulp.watch(resolvePath(paths().source.css) + '/**/*.css', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:css', reloadCSS));
   gulp.watch(resolvePath(paths().source.styleguide) + '/**/*.*', { awaitWriteFinish: true }).on('change', gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS));
+
+  // NERDSCHOOL watch tasks
+  gulp.watch(path.resolve(paths().source.css, 'scss/**/*.scss'), { awaitWriteFinish: true }).on('change', gulp.series('compile-sass'));
 
   var patternWatches = [
     resolvePath(paths().source.patterns) + '/**/*.json',

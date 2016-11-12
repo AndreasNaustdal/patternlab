@@ -1,0 +1,30 @@
+.breadcrumbs {
+  $color-breadcrumbs: $color-light-royal-blue;
+  $color-breadcrumbs-bg: $color-pale-grey-2;
+  $color-breadcrumbs-arrow: $color-coral;
+  $color-breadcrumbs-disabled: $color-warm-grey;
+
+  @include list-reset();
+
+  display: flex;
+  font-size: 15px;
+  background: $color-breadcrumbs-bg;
+
+  li {
+    &::after {
+      content: ">";
+      color: $color-breadcrumbs-arrow;
+      margin: 0 10px;
+    }
+
+    &:last-child {
+      pointer-events: none;
+      cursor: default;
+
+      &::after { display: none }
+      a { color: $color-breadcrumbs-disabled; }
+    }
+  }
+
+  a { color: $color-breadcrumbs; }
+}

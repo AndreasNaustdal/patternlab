@@ -1,0 +1,61 @@
+// Overrides for default unslider styles
+
+.unslider{
+  margin-bottom: 30px;
+
+  &-nav {
+    ol li {
+      border: solid 1px $color-cerulean;
+      height: 10px;
+      margin: 0 5px;
+      width: 10px;
+
+      &.unslider-active {
+        background: $color-azure;
+        border-color: $color-azure;
+      }
+    }
+  }
+
+  &-arrow {
+    color: $color-cerulean;
+    font-family: $font-family-rubik;
+    font-size: 0;
+    min-height: 20px;
+    min-width: 64px;
+
+    @include media($medium-screen-up) {
+      font-size: 18px;
+    }
+
+    &::before {
+      @extend .svg-icn-chevron-medium-blue;
+      bottom: 0;
+      content: '';
+      margin: auto 0;
+      position: absolute;
+      top: 0;
+    }
+
+    &.prev {
+      left: 0;
+      padding-left: 24px;
+
+      &:before {
+        left: 0;
+        transform: scale(1.25) rotate(180deg);
+      }
+    }
+
+    &.next {
+      right: 0;
+      padding-right: 24px;
+
+      &:before {
+        right: 0;
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
