@@ -3,6 +3,7 @@
   border-bottom: $border-dotted;
   padding-top: $small-spacing;
   padding-bottom: $small-spacing;
+  // background: $color-blueberry;
 
   &__inner {
     display: flex;
@@ -30,13 +31,15 @@
   &__nav-inner {
     @include media($mobile-only) {
       position: absolute;
+      z-index: 999;
       top: 100%;
       left: 0;
       right: 0;
       max-height: 0;
       overflow: hidden;
       transition: max-height $transition-base;
-      background: $color-blue-grey-2;
+      background: $color-blue-grey-1;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
     }
   }
 

@@ -27,7 +27,7 @@
   }
 
   &__subheading {
-    font-size: $font-size-base-mobile;
+    font-size: 14px;
     color: $color-light-royal-blue;
 
     @include media($medium-screen-up) { font-size: $font-size-base; }

@@ -11,7 +11,7 @@
   border-bottom: $border-accent;
 
   @include media($mobile-only) {
-    display: none; 
+    display: none;
   }
 
   &__list {
@@ -26,7 +26,7 @@
 
   li {
     &::after {
-      content: ">";
+      content: "\00BB";
       color: $color-breadcrumbs-arrow;
       margin: 0 10px;
     }

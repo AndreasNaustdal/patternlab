@@ -44,6 +44,8 @@ Run Pattern lab:
 
 `gulp serve`
 
+This executes one of the main gulp tasks which compiles our solution. The task starts up a local web server that hosts the solution and the task will keep running and listen for changes on certain files within our solution.
+
 The application will now open in your default browser at url: [http://localhost:3000](http://localhost:3000).
 
 Try interracting a bit with the site

@@ -613,7 +613,6 @@ a {
     color: inherit;
     background: #fff;
     text-decoration: none;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.48);
     text-align: center;
     font-family: "Rubik", sans-serif;
     font-size: 21px;
@@ -627,7 +626,7 @@ a {
   .button--secondary {
     background: #fff;
     color: #634efb;
-    padding: 7px 50px; }
+    border: 1px solid #634efb; }
     .button--secondary:hover {
       background: #634efb;
       color: #fff; }
@@ -816,6 +815,81 @@ a {
       transform: scale(0.7);
       margin-left: 5px; }
 
+/*------------------------------------*    #HERO
+\*------------------------------------*/
+/**
+ * Callout block with image text and CTA-button
+ * Has a slanted decoration above text block
+ */
+.hero {
+  position: relative;
+  min-height: 400px;
+  background-position: top;
+  background-size: cover;
+  color: #fff; }
+  .hero__image-container {
+    background-position: top;
+    background-size: cover;
+    display: block;
+    height: 200px;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .hero__image-container {
+        height: 350px; } }
+  .hero__content-container {
+    position: relative;
+    width: 100%;
+    min-height: 122px;
+    overflow: visible;
+    padding: 30px 10px;
+    background: #00aaff; }
+    @media screen and (min-width: 768px) {
+      .hero__content-container {
+        padding: 45px 40px; } }
+  .hero__content {
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media screen and (min-width: 1024px) {
+      .hero__content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between; } }
+  @media screen and (min-width: 1024px) {
+    .hero__text, .hero__button {
+      display: inline-block; } }
+  .hero__text {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 690px;
+    font-family: "Rubik", sans-serif;
+    font-size: 19px;
+    line-height: 1.3; }
+    @media screen and (min-width: 768px) {
+      .hero__text {
+        font-size: 21px; } }
+    .hero__text > *:last-child {
+      margin-bottom: 0; }
+  .hero__heading {
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 2.2;
+    margin-bottom: 2px; }
+    @media screen and (min-width: 768px) {
+      .hero__heading {
+        font-size: 15px;
+        line-height: 1.9; } }
+  .hero__button {
+    margin-top: 35px; }
+    @media screen and (max-width: 767px) {
+      .hero__button {
+        display: flex;
+        justify-content: space-around; } }
+    @media screen and (min-width: 1024px) {
+      .hero__button {
+        max-width: 225px;
+        margin: 0; } }
+
 /*------------------------------------*    #L-CONTAINER
 \*------------------------------------*/
 /**
@@ -862,7 +936,7 @@ a {
       .logo-link__heading {
         font-size: 30px; } }
   .logo-link__subheading {
-    font-size: 15px;
+    font-size: 14px;
     color: #634efb; }
     @media screen and (min-width: 768px) {
       .logo-link__subheading {
@@ -885,7 +959,7 @@ a {
     padding-top: 0.35em;
     padding-bottom: 0.35em; }
   .breadcrumbs li::after {
-    content: ">";
+    content: "\00BB";
     color: #f55858;
     margin: 0 10px; }
   .breadcrumbs li:last-child {
@@ -923,13 +997,15 @@ a {
   @media screen and (max-width: 767px) {
     .global-header__nav-inner {
       position: absolute;
+      z-index: 999;
       top: 100%;
       left: 0;
       right: 0;
       max-height: 0;
       overflow: hidden;
       transition: max-height 400ms ease;
-      background: #f0f7fa; } }
+      background: #f4f9fb;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); } }
   .global-header__nav-toggle-input:checked + .global-header__nav-inner {
     max-height: 100vh; }
 
