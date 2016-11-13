@@ -3,8 +3,9 @@
 ******************************************************/
 var sass = require('gulp-sass'); // To compile our sass partials
 var sassGlob = require('gulp-sass-glob'); // Allows us to compile folders of sass partial, so we don't have to specify each partial explicitly (uses globbing pattern)
-var plumber = require('gulp-plumber');  // Errors messages that don't break streams
-var notify = require("gulp-notify");    // Get better error notifications
+var plumber = require('gulp-plumber'); // Errors messages that don't break streams
+var notify = require("gulp-notify"); // Get better error notifications
+var svgSprite = require('gulp-svg-sprite'); // Lets us create a sprite from a folder of SVGs
 
 /******************************************************
  * Nerdschool: Custom functions
@@ -42,6 +43,35 @@ gulp.task('compile-sass', function () {
   .pipe(sass())
   .pipe(gulp.dest(path.resolve(paths().source.css)))
   .pipe(browserSync.stream());
+});
+
+gulp.task('create-sprite', function () {
+  return gulp.src('sprite/*.svg', {cwd: path.resolve(paths().source.images)})
+    .pipe(svgSprite({
+      shape: {
+        spacing: { // Add padding
+          padding: 0
+        }
+      },
+      mode: {
+        css: {
+          dest : '../source',
+          sprite : '../images/sprite.svg',
+          layout: 'diagonal',
+          dimensions: true,
+          bust: false,
+          render: {
+            scss: {
+              dest: '../css/scss/02-generic/_sprite.scss'
+            }
+          }
+        }
+      }
+    }))
+    .on('error', function (error) {
+      console.log(error);
+    })
+    .pipe(gulp.dest(path.resolve(paths().source.css)))
 });
 
 /******************************************************
@@ -252,4 +282,9 @@ gulp.task('patternlab:connect', gulp.series(function(done) {
 gulp.task('default', gulp.series('patternlab:build'));
 gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
 gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+
+/******************************************************
+ * Nerdschool: CUSTOM TASKS
+******************************************************/
 gulp.task('serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
+gulp.task('sprite', gulp.series('create-sprite', 'pl-copy:img', 'compile-sass'));

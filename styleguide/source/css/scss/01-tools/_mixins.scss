@@ -237,7 +237,7 @@
   }
 
   &::#{$position} {
-    @extend #{$extend};
+    @extend #{$extend} !optional;
     content: '';
     display: $display;
     @if ( $margin != 0  ) { margin: $margin; }

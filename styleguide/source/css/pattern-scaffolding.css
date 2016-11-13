@@ -52,3 +52,28 @@
   font-size: 90%;
   line-height: 1;
 }
+
+/* Nerdschool custom styles */
+#sg-patterns {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sprite {
+    width: 100%;
+    background-color: rgba(0,0,0, .25);
+    background-image:
+      -moz-linear-gradient(45deg, rgba(100,100,100,.1) 25%, transparent 25%),
+      -moz-linear-gradient(-45deg, rgba(100,100,100,.1) 25%, transparent 25%),
+      -moz-linear-gradient(45deg, transparent 75%, rgba(100,100,100,.1) 75%),
+      -moz-linear-gradient(-45deg, transparent 75%, rgba(100,100,100,.1) 75%);
+    background-image:
+      -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(100,100,100,.1)), color-stop(.25, transparent)),
+      -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, rgba(100,100,100,.1)), color-stop(.25, transparent)),
+      -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, rgba(100,100,100,.1))),
+      -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, rgba(100,100,100,.1)));
+
+
+    background-size: 30px 30px;
+    background-position:0 0, 15px 0, 15px -15px, 0px 15px;
+}
