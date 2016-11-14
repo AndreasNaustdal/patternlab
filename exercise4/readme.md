@@ -35,9 +35,12 @@ in the appropriate variable: `breadcrumbs: [true|false]`.
 
 # Exercise 4b - Using `{{styleModifier}}`
 
-styleModifier is a commonly used predefined parameter slightly different syntax,
-but aside from that it works just like any other pattern parameter:
-- You need to define where to use it in the `.mustache` file, and
+styleModifier is a concept similar to patter parameters, but with it's own
+syntax and a predefined variable name. It is typically used to add _modifier class(es)_
+to elements that in some way, big or small, change their appearance.
+
+Like pattern parameters
+- you need to define where to use it in the `.mustache` file, and
 - it will only be available to the first level of includes.
 
 Example include:
