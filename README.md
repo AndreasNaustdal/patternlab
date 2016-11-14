@@ -48,4 +48,4 @@ This executes one of the main gulp tasks which compiles our solution. The task s
 
 The application will now open in your default browser at url: [http://localhost:3000](http://localhost:3000).
 
-Try interracting a bit with the site
+Try interracting a bit with the site. We will get more acquainted with the folder structure and build processes of Pattern Lab in **exercise 1**
