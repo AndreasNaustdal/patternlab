@@ -15,15 +15,10 @@
 
   position: relative;
   min-height: $hero-height;
-  // max-width: $max-width-inner;
-  // margin: 0 auto;
+  margin-bottom: $large-spacing;
   background-position: top;
   background-size: cover;
   color: $color-hero-text;
-
-  // @include media($x-large-screen-up) {
-  //   max-width: $max-width-inner-xlarge;
-  // }
 
   &__image-container {
     background-position: top;
