@@ -1,18 +1,17 @@
-# Exercise 4 – Ordering patterns
-By default, Node version of Pattern Lab organizes pattern types, pattern subtypes, and patterns alphabetically when displaying them in the drop-down navigation, pattern subtype “view all” pages, and the “all” style guide. This may not meet your needs. You can re-order pattern types, pattern subtypes and patterns by prefixing them with two digit numbers.
+# Exercise 3 – Including patterns in one another
 
-For example, we’ll look at how we can re-organize patterns. Say you have a `lists` folder inside your `atoms` folder which holds all you list patterns. Using alphabetical ordering the `lists` pattern subtype in `atoms` could look like:
-```
-definition.mustache
-ordered.mustache
-unordered.mustache
-```
-This is also the order they’ll show up in the drop-down navigation. Because you rarely need to see the definition list pattern maybe you want to have it show up last in the navigation. To re-order the patterns just add numbers to the beginning:
-```
-01-ordered.mustache
-02-unordered.mustache
-03-definition.mustache
-```
-The numbers will not show up when Pattern Lab displays the name of the pattern in the drop-down navigation. They’re simply a re-ordering mechanism.
+To include one pattern within another, for example to create a molecule from several atoms, you can use the default include syntax from Mustache.
 
-##Her kommer oppgave
+The shorthand syntax uses the following format:
+```
+{{> [patternType]-[patternName] }}
+```
+For example, to include the following pattern in a molecule:
+```
+00-atoms/images/landscape-16x9.mustache
+```
+The shorthand include syntax would be:
+```
+{{> atoms-landscape-16x9 }}
+```
+The pattern type matches the top-level folder and is `atoms`. The pattern name matches the template file and is `landscape-16x9`. Any digits used for ordering are dropped from both the pattern type and pattern name. Pattern subtypes are never a part of the shorthand include syntax. This way patterns can be re-organized within a pattern type and/or by using digits without needing to change your pattern includes.
