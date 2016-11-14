@@ -53,6 +53,8 @@ Usage in the included pattern:
 </div>
 ```
 
-### Task: Modify `logo-link.mustache` to use `styleModifier` as a modifier class in the main wrapping `a` element
+### Task: Modify `logo-link.mustache`
+...to use `styleModifier` as a modifier class in the main wrapping `a` element
 
-### Task: Modify `header.mustache` to include the link-logo pattern with modifier: `logo-link--fastspin`
+### Task: Modify `header.mustache`
+...to include the link-logo pattern with modifier: `logo-link--fastspin`
