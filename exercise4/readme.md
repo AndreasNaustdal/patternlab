@@ -33,7 +33,7 @@ Find the line of code that includes `molecules-breadcrumb` and wrap it in...
 in the appropriate variable: `breadcrumbs: [true|false]`.
 
 
-# Exercise 4b - Using `{{styleModifier}}`
+# Exercise 4b - Using `styleModifier`
 
 styleModifier is a concept similar to patter parameters, but with it's own
 syntax and a predefined variable name. It is typically used to add _modifier class(es)_
@@ -47,9 +47,13 @@ Example include:
 ```
 {{> [patternType]-[patternName]:mypattern--dark }}
 ```
-Usage in the included:
+Usage in the included pattern:
 ```
 <div class="mypattern {{styleModifier}}">
 ...
 </div>
 ```
+
+### Modify `logo-link.mustache` to use `styleModifier` as a modifier class
+
+### Modify `header.mustache` to include the link-logo pattern with modifier: `logo-link--fastspin`

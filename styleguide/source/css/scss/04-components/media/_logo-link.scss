@@ -14,6 +14,12 @@
     }
   }
 
+  &--fastspin {
+    &::before {
+      animation: spin 1s linear infinite;
+    }
+  }
+
   &__text {
     line-height: 1;
   }
