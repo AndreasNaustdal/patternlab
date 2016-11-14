@@ -34,21 +34,21 @@ Find the line of code that includes `molecules-breadcrumb` and wrap it in...
 
 # Exercise 4b - Using `styleModifier`
 
-styleModifier is a concept similar to patter parameters, but with it's own
+styleModifier is a concept similar to pattern parameters, but with it's own
 syntax and a predefined variable name. It is typically used to add _modifier class(es)_
 to elements that in some way, big or small, change their appearance.
 
-Like pattern parameters
+Like pattern parameters...
 - you need to define where to use it in the `.mustache` file, and
 - it will only be available to the first level of includes.
 
 Example include:
 ```
-{{> [patternType]-[patternName]:mypattern--dark }}
+{{> [patternType]-[patternName]:mycomponent--dark }}
 ```
 Usage in the included pattern:
 ```
-<div class="mypattern {{styleModifier}}">
+<div class="mycomponent {{styleModifier}}">
 ...
 </div>
 ```
