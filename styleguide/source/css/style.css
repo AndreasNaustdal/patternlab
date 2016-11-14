@@ -578,7 +578,7 @@ p {
 
 a {
   text-decoration: none;
-  transition: all 300ms, color 150ms, background 150ms; }
+  transition: all 300ms, color 150ms, background 150ms; }
 
 /*------------------------------------*    #BUTTON
 \*------------------------------------*/
@@ -976,6 +976,8 @@ a {
         background-size: 50px;
         width: 50px;
         height: 50px; } }
+  .logo-link--fastspin::before {
+    animation: spin 1s linear infinite; }
   .logo-link__text {
     line-height: 1; }
   .logo-link__heading {
