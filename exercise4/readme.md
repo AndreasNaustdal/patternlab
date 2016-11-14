@@ -20,7 +20,7 @@ Example:
 {{> [patternType]-[patternName](variable: value) }}
 ```
 
-### Modify `header.mustache` to make breadcrumbs optional
+### Task: Modify `header.mustache` to make breadcrumbs optional
 Find the line of code that includes `molecules-breadcrumb` and wrap it in...
 ```
 {{#breadcrumbs}}
@@ -28,9 +28,8 @@ Find the line of code that includes `molecules-breadcrumb` and wrap it in...
 {{/breadcrumbs}}
 ```
 
-### Include the header in both `templates`
-...but only show breadcrumbs on templates _other than_ the homepage by passing
-in the appropriate variable: `breadcrumbs: [true|false]`.
+### Task: Modify the header include in `article template`
+...to pass `breadcrumbs: true` to the header.
 
 
 # Exercise 4b - Using `styleModifier`
@@ -54,6 +53,6 @@ Usage in the included pattern:
 </div>
 ```
 
-### Modify `logo-link.mustache` to use `styleModifier` as a modifier class
+### Task: Modify `logo-link.mustache` to use `styleModifier` as a modifier class
 
-### Modify `header.mustache` to include the link-logo pattern with modifier: `logo-link--fastspin`
+### Task: Modify `header.mustache` to include the link-logo pattern with modifier: `logo-link--fastspin`
