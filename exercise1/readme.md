@@ -91,7 +91,7 @@ A single pattern can be defined by the combination of three files
 
 1. A template file suffixed by `.mustache`. This file contains our actual Mustache markup
 2. A data file suffixed by `.json`
-3. A documentation file suffixed by `.json`
+3. A documentation file suffixed by `.md`
 
 The data and documentation files are optional, but enbles some more advanced syntax, and a way to document your patterns.
 
@@ -100,9 +100,17 @@ The unprefixed folders in `source` keep our non-Pattern lab source files, for in
 ## Pattern Lab build
 If we open up `gulpfile.js` we'll see a list of dependecies (stored as js variables), functions, and Gulp tasks.
 
-We commonly add tasks that
+The gulpfile is responsible for defining all the task we run from the command line, like we did earlier with `gulp serve`. This actually trigger a series of tasks that goes through all the steps to build our Pattern Lab solution and serve it from a local web server. It activates another task which listens for changes to our files and auto-reloads our site in the browser if we make changes to our source files. If we wanted to just build our solution without the web server and auto reloading, we could simply type `gulp` as a command.
+
+One thing that's nice about Pattern Lab being built with gulp is the fact that we can easily modify the gulpfile to do additional tasks. If you open up `gulpfile.js` you will see that we've added some custom functionality (look for the comments) that we want in our own build process.
+
+There no limits to how many additional build steps you add to your gulpfile, but it might be an idea to limit yourself a little bit in order to keep the file manageble😀
+
+Some of the more common tasks we add include are tasks that:
 * Compiles sass, including vendor prefixing to support older browsers.
 * Checks the code (scss, js, mustache) for syntax errors
 * Provides better error logging
 * Creates icon sprites
 * Possibilities are endless
+
+Now, enough with all the theory! Lets get to **exercise 2** where we actually start building something.
