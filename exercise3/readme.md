@@ -67,6 +67,6 @@ If you wanted six items in your list you’d write:
 ```
 Now that you've seen how `listItems` works, let's try to implement it in the "featured" section of our `homepage` template.
 
-First open up `featured.mustache` in your text editor, it's located under `_patterns/02-organisms/sections`. As you can see within the markup we're including the the pattern `{{> molecules-article-teaser }}` four times to create our list. **To do the same, but using `listItems` instead of repeating the pattern include**.
+First open up `featured.mustache` in your text editor, it's located under `_patterns/02-organisms/sections`. As you can see within the markup we're including the the pattern `{{> molecules-article-teaser }}` four times to create our list. **Do the same, but using `listItems` instead of repeating the pattern include**.
 
 If done correctly, you should now see that the "featured" section on [http://localhost:3000/?p=templates-homepage](http://localhost:3000/?p=templates-homepage) is now dynamically populated with dummy data. This gives us a more relistic feel of how our design might look on a live website, and shows us if the design handles different content without messing up the layout.
