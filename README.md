@@ -4,8 +4,8 @@ Abstract about what we will be covering in the workshop
 ## Prerequisites
 * Bring your own laptop
 * Make sure Git is installed and available on command line. Install from [https://git-scm.com/downloads](https://git-scm.com/downloads)
-* Node JS with npm must be installed and available on command line. Install from: https://nodejs.org/
-* Install text editor of choice, preferrably an editor with directory browser (Sublime, Atom and WebStorm are all good alternatives)
+* Node JS with npm must be installed and available on command line. Install from: [https://nodejs.org/](https://nodejs.org/). In this workshop we need a node version that is 5.0 or higher. To check your node version, type `node -v` in your command line.
+* Install text editor of choice, preferrably an editor with directory browser (Sublime, Atom and WebStorm are all good alternatives).
 * We will not go into the details about npm or gulp, if you are interested in how they work, please checkout the exercises from the js-infrastructure session: https://github.com/nerdschoolbergen/js-infrastructure
 
 ## Introduction
@@ -13,7 +13,7 @@ Write a short intro
 
 ## Agenda
 * Pizza
-* 30ish minutes introduction to front-end challenges, style guides/design systems and Pattern Lab
+* 20-30 minutes introduction to front-end challenges, style guides/design systems and Pattern Lab
 * Forking git repository and get it running on local computer
 * Something
 * Something else
@@ -26,21 +26,15 @@ Clone the repository to your local computer by opening command line, navigate to
 
 Navigate to the repository folder and run the following commands:
 
-Install gulp on command line:
+If you haven't installed the command line interface (CLI) for gulp yet, do so by installing it globally. From the command line type:
 
-`npm install -g gulp`
+`npm install gulpjs/gulp-cli -g`
 
-Install application dependencies:
+Once we have installed Gulp CLI globally its time to install the application dependencies using NPM. In your command line, navigate to the `styleguide` directory within our repo and type the following:
 
 `npm install`
 
-Once the repository is properly downloaded, open the repository using your favorite text editor.
-
-Explain folder structure
-
-Explain dependencies installed?
-
-Run Pattern lab:
+Once all dependencies are installed, we should be able to generate our Patter Lab solution. From the command line, still standing within the `styleguide` directory, type the following command (heads up, this command will open up your default browser):
 
 `gulp serve`
 
@@ -48,4 +42,8 @@ This executes one of the main gulp tasks which compiles our solution. The task s
 
 The application will now open in your default browser at url: [http://localhost:3000](http://localhost:3000).
 
-Try interracting a bit with the site. We will get more acquainted with the folder structure and build processes of Pattern Lab in **exercise 1**
+Try interracting a bit with the site just to get a feel for how its built. We will get more acquainted with the folder structure and build processes of Pattern Lab in **exercise 1**
+
+## Helpful resources
+* [Pattern Lab documentation](http://patternlab.io/docs/index.html)
+* [Mustache template language documentation](https://mustache.github.io/mustache.5.html)
