@@ -1,5 +1,5 @@
 # Building front-ends with PatternLab
-Abstract about what we will be covering in the workshop
+[Slides from the presentation can be found here](https://docs.google.com/presentation/d/18R4Toq5VyJSwfvm7fsn9z95w4N_qO6XU8fDbTwMFOCI/edit?usp=sharing)
 
 ## Prerequisites
 * Bring your own laptop
@@ -15,9 +15,8 @@ Write a short intro
 * Pizza
 * 20-30 minutes introduction to front-end challenges, style guides/design systems and Pattern Lab
 * Forking git repository and get it running on local computer
-* Something
-* Something else
-* Final step
+* Run through the excercises found in this repo
+* Try to create a functioning Pattern Lab site :)
 
 ## Getting started
 We will start with creating your own fork of this repository.
