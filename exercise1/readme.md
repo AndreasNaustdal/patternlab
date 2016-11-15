@@ -88,6 +88,7 @@ If we open up our `source` folder we'll see the the folder structure used to hol
 * `_patterns` contains all our pattern templates. As you can see it follows the structure defined by _atomic design_. We have `atoms`, `molecules`, `organisms`, `templates` and `pages`. The numbers you see prefixed in file and folder names are used strictly for ordering. Within each you will find one or several pattern templates, this are the files with the `.mustache` ending.
 
 A single pattern can be defined by the combination of three files
+
 1. A template file suffixed by `.mustache`. This file contains our actual Mustache markup
 2. A data file suffixed by `.json`
 3. A documentation file suffixed by `.json`
