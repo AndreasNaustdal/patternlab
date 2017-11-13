@@ -1,6 +1,10 @@
 # Exercise 2 – Adding new patterns
 
-Just to get started we will try to create a very simple pattern
+Just to get started we will try to create a very simple pattern. Pattern Lab uses a templating language called Mustache.
+Mustache variables are contained within double curly brackets, and they render contens stored in a JSON object. 
+Exercice 2-5 will go through how to use the Mustache language, but if you want to know more the 
+[Mustache guide](https://mustache.github.io/mustache.5.html) go your back. 
+
 
 Navigate to `styleguide/source/_patterns/00-atoms` and create a new folder named `text`. Create a new file and name it `paragraph.mustache`.
 
@@ -12,4 +16,4 @@ Save your file and in your terminal run `gulp serve` from within the `styleguide
 
 As you can see, our `text` folder is now visible under `atoms` in the menu. If you now click `paragraph` you will se our newly created pattern rendered out.
 
-As you might have noticed. The paragraph we created now contains a bunch of dummy text. This is because in our pattern we utilized a Mustache variable: `{{ excerpt.short }}`. Mustache variables are contained within double curly brackets, and they render contens stored in a JSON object. In the case of `excerpt.short` this is stored in the `data.json` file, which you can find under `styleguide/source/_data/` in our repo. `data.json`is a file that comes bundled with Pattern Lab, and it holds dummy data that you would commonly use when prototyping a website.
+As you might have noticed. The paragraph we created now contains a bunch of dummy text. This is because in our pattern we utilized a Mustache variable: `{{ excerpt.short }}`.  In the case of `excerpt.short` this is stored in the `data.json` file, which you can find under `styleguide/source/_data/` in our repo. `data.json`is a file that comes bundled with Pattern Lab, and it holds dummy data that you would commonly use when prototyping a website.
