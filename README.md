@@ -1,22 +1,15 @@
 # Building front-ends with PatternLab
-[Slides from the presentation can be found here](https://docs.google.com/presentation/d/18R4Toq5VyJSwfvm7fsn9z95w4N_qO6XU8fDbTwMFOCI/edit?usp=sharing)
 
-## Prerequisites
+This workshop will give a short introduction to SASS, and then show how we can build re-usable and easily maintainable front-end components using PatternLab.
+
+## [Open presentation slides](https://docs.google.com/presentation/d/18R4Toq5VyJSwfvm7fsn9z95w4N_qO6XU8fDbTwMFOCI/edit?usp=sharing)
+
+## What you need
 * Bring your own laptop
 * Make sure Git is installed and available on command line. Install from [https://git-scm.com/downloads](https://git-scm.com/downloads)
 * Node JS with npm must be installed and available on command line. Install from: [https://nodejs.org/](https://nodejs.org/). In this workshop we need a node version that is 5.0 or higher. To check your node version, type `node -v` in your command line.
 * Install text editor of choice, preferrably an editor with directory browser (Sublime, Atom and WebStorm are all good alternatives).
 * We will not go into the details about npm or gulp, if you are interested in how they work, please checkout the exercises from the js-infrastructure session: https://github.com/nerdschoolbergen/js-infrastructure
-
-## Introduction
-Write a short intro
-
-## Agenda
-* Pizza
-* 20-30 minutes introduction to front-end challenges, style guides/design systems and Pattern Lab
-* Forking git repository and get it running on local computer
-* Run through the excercises found in this repo
-* Try to create a functioning Pattern Lab site :)
 
 ## Getting started
 We will start with creating your own fork of this repository.
@@ -43,6 +36,16 @@ The application will now open in your default browser at url: [http://localhost:
 
 Try interracting a bit with the site just to get a feel for how its built. We will get more acquainted with the folder structure and build processes of Pattern Lab in **exercise 1**
 
+### Exercises
+
+- [Exercise 1](exercise-1/) (start here)
+- [Exercise 2](exercise-2/)
+- [Exercise 3](exercise-3/)
+- [Exercise 4](exercise-4/)
+- [Exercise 5](exercise-5/)
+- [Exercise 6](exercise-6/)
+
 ## Helpful resources
+
 * [Pattern Lab documentation](http://patternlab.io/docs/index.html)
 * [Mustache template language documentation](https://mustache.github.io/mustache.5.html)
