@@ -38,12 +38,12 @@ Try interracting a bit with the site just to get a feel for how its built. We wi
 
 ### Exercises
 
-- [Exercise 1](exercise-1/) (start here)
-- [Exercise 2](exercise-2/)
-- [Exercise 3](exercise-3/)
-- [Exercise 4](exercise-4/)
-- [Exercise 5](exercise-5/)
-- [Exercise 6](exercise-6/)
+- [Exercise 1](exercise1/) (start here)
+- [Exercise 2](exercise2/)
+- [Exercise 3](exercise3/)
+- [Exercise 4](exercise4/)
+- [Exercise 5](exercise5/)
+- [Exercise 6](exercise6/)
 
 ## Helpful resources
 
