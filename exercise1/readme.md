@@ -114,3 +114,5 @@ Some of the more common tasks we add include are tasks that:
 * Possibilities are endless
 
 Now, enough with all the theory! Lets get to **exercise 2** where we actually start building something.
+
+### [Go to exercise 2 :arrow_right:](../exercise2)

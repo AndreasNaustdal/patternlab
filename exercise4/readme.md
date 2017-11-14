@@ -62,3 +62,5 @@ Usage in the included pattern:
 
 **PS:** If your logo now disappears it may be because of an [open bug](https://github.com/pattern-lab/patternlab-node/issues/250) in Pattern Lab
 affecting patterns included _with_ parameters. Workaround for now is to remove those parameters from the templates including the `header` organism.
+
+### [Go to exercise 5 :arrow_right:](../exercise5)
